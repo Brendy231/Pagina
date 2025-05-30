@@ -1,0 +1,414 @@
+/* encabezado */
+body {
+    margin: 0; /* Margen del contenedor*/
+    font-family: "Poppins", sans-serif; 
+  }
+  
+  /*Estilo del encabezado*/
+  header {
+    background-color: #b84e19; /*color de fondo encabezado*/
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1); /*sombra*/
+    padding: 0; /*agrega espacio interno*/
+    position: sticky; /* fijar encabezado*/
+    top: 0; /*adhiere al borde superior de la ventana*/
+    width: 100%;
+    z-index: 1000; /*mantener por encima de otros elementos*/
+    margin-bottom: 110px;
+  }
+
+
+  /* contenido de encabezado */
+  .container {
+    font-family: "Cantata One", serif;
+    width: 100%; /*se adapta al ancho disponible*/
+    max-width: 85%; /*Limita al ancho total */
+    margin: auto;
+    display: flex;
+    justify-content: space-between; /*separa los elementos*/
+    align-items: center;
+  }
+  
+  #hamburguesa{
+    display: none;
+  }
+
+  /*Brendy*/
+  .logo {
+    font-size: 28px; /*tamaño de letra*/
+    color: #ffffff; 
+    font-weight: 600;
+  }
+
+  /* Contenido de encabezado - Menú */
+  .nav-menu a {
+    margin-left: 25px; /*separa cada enlace con espacio*/
+    text-decoration: none; /*quita el subrayado de los enlaces*/
+    color: #ffcc13; /*Color de los enlaces*/
+    font-weight: 400; /* Grosor de la letra*/
+    transition: 0.3s; /*suaviza el cambio de color al pasar el mouse*/
+    
+  }
+
+  .nav-menu a:hover {
+  color: #ffffff; /* Cambia a blanco, o el color que prefieras */
+}
+
+/*Inicio*/
+  .inicio {
+    margin: auto; /* Margen del contenedor*/
+    min-height: 80vh; /*Hace que la sección ocupe altura de la pantalla*/
+    display: flex; /*alinea el contenido en fila o columna*/
+    align-items: center; /*alinea verticalmente el contenido (contenido comience más arriba)*/
+    justify-content: center; /*alinea horizontalmente el contenido*/
+    padding-top: 50px;
+
+    background-image: url("Fondo-08.png"); /* Aquí colocas el nombre exacto de tu imagen */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: #fff2e0; /* Color de respaldo por si no carga la imagen */
+  }
+  
+/*Contenido dentro del inicio*/
+  .contenido-inicio {
+    display: flex; /*organiza el contenido*/
+    flex-direction: row; /*asegura que esté en horizontal(foto izquierda, texto derecha)*/ 
+    align-items: center; /*alinea verticalmente el contenido*/
+    max-width: 1000px; /*limita el ancho total*/
+    width: 100%; /*se adapta al ancho disponible*/
+    gap: 150px; /*crea espacio entre algo*/
+    justify-content: center;
+    flex-wrap: wrap; /*permite que los elementos bajen (diseño responsivo)*/
+  }
+  
+  .foto{
+    text-align: center;
+    margin-top: 0px;
+    font-size: 130%;
+    color: #b84e19; /*Color de mi nombre*/
+  }
+
+  /*Estilo de la imagen*/
+  .foto img {
+    width: 85%; /*se adapta al ancho disponible*/
+    max-width: 300px; /*limita el ancho total*/
+    height: auto; /*mantiene la proporción original (no se deforma)*/
+    border-radius: 4%; /*esquinas redondeadas*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.258); /*sombra*/
+  }
+  
+  /*Texto 1 Hola*/
+  .texto h2 {
+    text-align: center;
+    font-family: "Cantata One", serif;
+    font-size: 340%; /*tamaño de letra*/
+    color: #7c4a2d;
+    margin-top: 0%;
+    margin-bottom: 3%; /*espacios entre titulo y parrafo*/
+    line-height: 0.7; /*espacios entre lineas (interlineado)*/
+  }
+
+/*emojis*/
+  .emoji {
+    display: inline-block; /*Permite el emoji se comporte como un bloque*/
+    animation: wave 2s infinite; /*animación (duración y repeticioón)*/
+    transform-origin: 70% 70%; /* rotación realista*/
+  }
+  
+    /*Movimiento de emojis*/
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  /*Texto 2 Nombre*/
+.texto h3 {
+  font-weight: 400px;
+  font-size: 30px;
+}
+
+  /*Texto 3 Parrafo*/
+  .texto p {
+    font-size: 20px;
+    color: #3a2304;
+    line-height: 1.5; /*Interlineado*/
+    max-width: 550px; /*limita el ancho total*/
+    text-align: center;
+    border-radius: 40px;
+  }
+
+
+/*responsive*/
+/*imagen de fondo*/
+  @media screen and (max-width: 768px) {
+    .inicio {
+      background-position: center;
+      background-size: cover;
+      padding-top: 30px;
+      background-image: url("fondo\ 2-16-16.png")
+    }
+  
+    .contenido-inicio {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
+    .texto {
+    background-color: rgba(255, 239, 212, 0.885); /* blanco semitransparente */
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra sutil*/
+  }
+
+  .h3{
+    font-size: 110%;
+  }
+
+  .texto h2 {
+    font-size: 220%;
+    line-height: 1.1;
+  }
+
+  .texto p {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  /*Menu responsive*/
+
+  #menu.oculto {
+    display: none;
+  }
+   #menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #b84e19;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 999;
+    border-radius: 10px;
+  }
+
+  #hamburguesa {
+    display: block;
+    margin: 10px 10px;
+    color: #502e0a;
+  }
+
+  #contacto p{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+#formulario-contacto {
+  display: flex;
+  align-items: center;
+}
+
+}
+
+
+  
+/*Sobre mi*/
+  .acerca {
+    background-color: #7c4a2d;
+    padding: 10px 80px; /*espacios de la franja*/
+    text-align: center; /*Centar texto*/
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    max-width: 100%;/* Mentiene la proporción de franja*/
+    scroll-behavior: smooth;
+  }
+  
+/*Mis Servicios*/
+
+/*Texto de mis servicios*/
+.encabezado-servicios {
+  padding: 10px 30%;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.encabezado-servicios h2 {
+  font-family: "Cantata One", serif;
+  margin: 0px;
+  font-size: 40px;
+  color: #7c4a2d;
+}
+
+.encabezado-servicios p {
+  margin-top: 80px;
+  font-size: 60px;
+}
+
+/* todas la sección*/
+  .servicios {
+    
+  background-image: url("fondo-18.png");
+    padding: 5% 30px;
+    padding-bottom: 160px;
+    background-color: #fff2e0; /* o el color que estés usando */
+    text-align: center;
+
+    }
+  
+  .galeria-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Organizar columna*/
+    gap: 30px; /*espacios entre tarjetas*/
+    margin-top: 85px;
+  }
+  
+  /*Cada tarjeta individual*/
+  .servicio {
+    background-color: #fff;
+    border-radius: 12px; /*Redondear esquinas*/
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px; /*Espacios internos*/
+    transition: transform 0.3s;
+  }
+  
+  /*Al pasar el mouse*/
+  .servicio:hover {
+    transform: translateY(-5px);
+  }
+  
+  /*Ajuste de imagenes - Servicios*/
+  .servicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /*Espacio arriba del título y tamaño del texto*/
+  .servicio h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  
+  /*Tamaño y color del texto descripción*/
+  .servicio p {
+    font-size: 0.95em;
+    color: #3a2304;
+  }
+  
+
+/*Contactame*/
+     /*Linea divisoria*/
+.linea-divisoria {
+  width: 100%;              /* Ancho de la línea */
+  margin: auto; /* Espacio arriba y abajo, centrado */
+  border-top: 3px solid #7c4a2d;  /* Grosor y color de la línea */
+  opacity: 0.5;            /* Hace que no sea tan fuerte visualmente */
+}
+
+  .contacto {
+    
+  background-image: url("fondo-18.png");
+    background-color: #fff2e0;
+    text-align: center;
+  }
+  
+  .contacto h2 {
+    color: #7c4a2d;
+    font-size: 2em;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    
+  }
+  
+  .contacto p {
+    font-size: 18px;
+    margin-bottom: 5%;
+    color: #3a2304;
+    margin: 2px;
+    margin-left: 170px;
+    margin-right: 170px;
+  }
+  
+  /* Íconos de contacto */
+  .medios-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+  .medios-contacto img {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s;
+  }
+  
+  .medios-contacto img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Formulario */
+  .formulario-contacto {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #745119;
+    font-size: 1em;
+  }
+  
+  .formulario-contacto button {
+    padding: 12px;
+    background-color: #d97b36;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 80px;
+  }
+  
+  .formulario-contacto button:hover {
+    background-color: #d97b36;
+  }
+
+  
+  /*Pie de pagina*/
+  .pie-pagina {
+    background-color: #3a2304; /* Puedes cambiarlo por el que quieras */
+    color: #fff2e0;  /* Color del texto */
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+  }
+  
+  .pie-pagina .redes-sociales a {
+    color: #fff2e0;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .pie-pagina .redes-sociales a:hover {
+    color: #ffcc70; /* Cambia de color al pasar el mouse */
+  }
+  
